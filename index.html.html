@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background-color: #c0c0c0 !important;
+    background-image:
+      radial-gradient(#ffffff 1px, transparent 1px),
+      radial-gradient(#ffffff 1px, transparent 1px) !important;
+    background-size: 12px 12px !important;
+    background-position: 0 0, 6px 6px !important;
+    font-family: "Courier New", Courier, monospace !important;
+  }
+  .wrap { max-width: 760px; }
+  .hint {
+    color: #000080 !important;
+    font-family: "Courier New", Courier, monospace !important;
+    font-weight: bold;
+    text-shadow: 1px 1px #fff;
+  }
+  .envelope {
+    filter: drop-shadow(4px 4px 0 #808080);
+  }
+  .env-back { background: #000080 !important; border: 3px outset #c0c0c0; }
+  .env-back:before { border-color: transparent transparent #000066 transparent !important; }
+  .env-back:after { border-color: transparent transparent transparent #000066 !important; }
+  .flap { border-top-color: #0000a0 !important; }
+  .paper {
+    background: #ffffcc !important;
+    border: 3px inset #c0c0c0;
+    border-radius: 0 !important;
+    font-family: "Comic Sans MS", "Courier New", monospace !important;
+  }
+  .paper h1 { color: #800080; text-shadow: 2px 2px #ffccff; }
+  .letter {
+    background: #ffffcc !important;
+    border: 4px ridge #c0c0c0;
+    border-radius: 0 !important;
+    font-family: "Comic Sans MS", "Courier New", monospace !important;
+    box-shadow: 6px 6px 0 #808080 !important;
+  }
+  .letter h2 {
+    color: #800080;
+    text-decoration: underline;
+    text-shadow: 2px 2px #ffccff;
+  }
+  .letter .small { font-family: "Courier New", monospace !important; color: #000080; }
+  button {
+    background: #c0c0c0 !important;
+    color: #000080 !important;
+    border: 3px outset #fff !important;
+    border-radius: 0 !important;
+    font-family: "Courier New", monospace !important;
+    font-weight: bold;
+  }
+  button:active { border-style: inset !important; }
+  .secret {
+    background: #ffccff !important;
+    border: 3px dotted #800080 !important;
+    border-radius: 0 !important;
+  }
+  .strawberry {
+    text-align: center;
+    margin: 18px auto;
+    padding: 10px;
+    border: 3px double #800080;
+    background: #fff0f8;
+    color: #800080;
+    font-weight: bold;
+    font-family: "Comic Sans MS", "Courier New", monospace;
+  }
+</style>
+<title>A Little Letter for Mina</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    background: linear-gradient(135deg, #f8eee9, #f3e4df, #eee7df);
+    color: #4b3b38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .wrap { width: min(720px, 100%); text-align: center; }
+  .hint { color: #806d68; margin-bottom: 16px; font-family: Arial, sans-serif; }
+  .envelope {
+    position: relative;
+    width: min(520px, 92vw);
+    height: 320px;
+    margin: 0 auto;
+    cursor: pointer;
+    perspective: 1000px;
+  }
+  .env-back {
+    position: absolute; inset: 0;
+    background: #dcae9f;
+    border-radius: 12px;
+    box-shadow: 0 18px 45px rgba(75,59,56,.18);
+  }
+  .env-back:before, .env-back:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0; height: 0;
+    border-style: solid;
+  }
+  .env-back:before {
+    left: 0;
+    border-width: 0 0 320px 260px;
+    border-color: transparent transparent #c99586 transparent;
+  }
+  .env-back:after {
+    right: 0;
+    border-width: 320px 0 0 260px;
+    border-color: transparent transparent transparent #c99586;
+  }
+  .flap {
+    position: absolute;
+    left: 0; top: 0;
+    width: 0; height: 0;
+    border-left: 260px solid transparent;
+    border-right: 260px solid transparent;
+    border-top: 170px solid #e7bbae;
+    transform-origin: top center;
+    transition: transform .8s ease;
+    z-index: 4;
+  }
+  .paper {
+    position: absolute;
+    left: 6%; right: 6%;
+    top: 28px;
+    height: 280px;
+    background: #fffaf5;
+    border-radius: 8px;
+    padding: 30px 28px;
+    box-shadow: 0 8px 25px rgba(75,59,56,.12);
+    transition: transform .9s ease;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .paper h1 { margin: 0 0 10px; font-size: 28px; font-weight: normal; }
+  .paper p { margin: 8px 0; line-height: 1.6; }
+  .open .flap { transform: rotateX(180deg); z-index: 1; }
+  .open .paper { transform: translateY(-205px); }
+  .letter {
+    display: none;
+    background: rgba(255,250,245,.96);
+    margin: 30px auto 0;
+    padding: 34px 30px;
+    border-radius: 16px;
+    box-shadow: 0 18px 50px rgba(75,59,56,.14);
+    text-align: left;
+    line-height: 1.8;
+    animation: fade .8s ease;
+  }
+  .open + .letter { display: block; }
+  .letter h2 { text-align: center; font-weight: normal; margin-top: 0; }
+  .letter .small { text-align: center; color: #8a7470; font-family: Arial, sans-serif; font-size: 13px; }
+  .reveal {
+    margin: 18px 0;
+    text-align: center;
+  }
+  button {
+    border: 0; border-radius: 999px; padding: 11px 18px;
+    background: #b98272; color: white; cursor: pointer;
+    font-family: Arial, sans-serif;
+  }
+  .secret { display:none; margin-top: 15px; padding: 15px; background:#f4e3dd; border-radius:12px; }
+  .show { display:block; animation: fade .5s ease; }
+  .signature { text-align:right; margin-top:24px; }
+  @keyframes fade { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  @media (max-width: 560px) {
+    .envelope { height: 260px; }
+    .flap { border-left-width: 46vw; border-right-width: 46vw; border-top-width: 135px; }
+    .env-back:before { border-width: 0 0 260px 46vw; }
+    .env-back:after { border-width: 260px 0 0 46vw; }
+    .paper { height: 225px; padding: 22px; }
+    .paper h1 { font-size: 23px; }
+    .open .paper { transform: translateY(-165px); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hint">Yohoo tingin dito 👀 — I made this little thing for you ♡</div>
+
+  <div class="envelope open" onclick="openLetter(this)">
+    <div class="env-back"></div>
+    <div class="paper">
+      <h1>For Mina,</h1>
+      <p>I figured I'd make your day a little better.</p>
+      <p style="font-size:13px;color:#8a7470;">(No pressure. No dramatic speech. Promise.)</p>
+    </div>
+    <div class="flap"></div>
+  </div>
+
+  <div class="letter">
+    <h2>Yohoo tingin dito 👀</h2>
+    <div class="small">from someone who was basically a stranger a month ago</div>
+
+    <p>Hi Mina,</p>
+
+    <p>
+      Honestly, I don't even know how to start this without making it sound
+      ridiculously cheesy HAHAHA. But I wanted to make this little letter
+      anyway, because why not? I just wanted to give you something that might
+      make your day a little better.
+    </p>
+
+    <p>
+      It's still kind of funny to think about how this even started. Krish
+      introduced us, and at first we're literally just two people who didn't
+      know each other. Ewan ko lang, ang random noh? HAHAHA. Like, out of all
+      the people we could've met, somehow tayo pa yung nagkausap.
+    </p>
+
+    <p>
+      And now, somehow, we've been talking for about a month. You're over in
+      Japan, I'm here in the Philippines, you're busy with work and life,
+      you've got your little brother to deal with, and somehow you're still
+      making time to talk to me. I notice that, you know.
+    </p>
+
+    <p>
+      I don't want to make this into some huge confession because we're still
+      getting to know each other. I don't think I can say I know you completely
+      yet — and that's actually one of the things I like about this. There's
+      still so much I don't know about you, and I genuinely want to find out.
+    </p>
+
+    <p>
+      I like where we are right now. The random conversations, the jokes,
+      the slightly chaotic moments, and just getting to know the person behind
+      the screen. You're a little baliw, I'm probably not any better, so I
+      guess we're doing fine HAHAHA.
+    </p>
+
+    <p>
+      I know distance can make things complicated sometimes. Japan and the
+      Philippines aren't exactly next door, and obviously we both have our own
+      lives going on. But I don't want the distance to make me overthink what
+      this is. For now, I'm just happy that it exists.
+    </p>
+
+    <p>
+      I don't know exactly where this goes, and I don't think we need to figure
+      that out right away. I just know that I enjoy talking to you, I'm happy
+      that I met you, and I'd like to keep learning more about you — little by
+      little, at our own pace.
+    </p>
+
+    <div class="strawberry">
+      🍓 P.S. — Strawberry Stick-O supremacy. I don't make the rules. HAHAHA
+    </div>
+
+    <div class="reveal">
+      <button onclick="event.stopPropagation(); revealSecret()">One more thing...</button>
+      <div class="secret" id="secret">
+        If this letter made you smile even a little, then okay na ako. Mission
+        accomplished. 🤍 And yes, I spent way too much time making this HAHAHA.
+      </div>
+    </div>
+
+    <p>
+      Take care of yourself, okay? Don't forget to rest when you can.
+      And even if you're busy or somewhere far away, I hope you know there's
+      someone here who genuinely enjoys having you around.
+    </p>
+
+    <p class="signature">
+      From the Philippines,<br>
+      <strong>Terrence</strong> ♡
+    </p>
+    <div style="text-align:center;margin-top:22px;color:#000080;font-family:'Courier New',monospace;font-size:11px;">
+      ★ best viewed with a little smile :) ★
+    </div>
+  </div>
+</div>
+
+<script>
+function openLetter(el) {
+  el.classList.toggle('open');
+}
+function revealSecret() {
+  document.getElementById('secret').classList.toggle('show');
+}
+</script>
+</body>
+</html>
