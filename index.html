@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,210 +10,231 @@
 <style>
 
 /* =========================================================
-   Y2K INTERNET BASE
+   RESET
 ========================================================= */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
+    margin: 0;
+    min-height: 100vh;
 
-  font-family:
-    "Trebuchet MS",
-    Verdana,
-    Arial,
-    sans-serif;
+    font-family:
+        "Trebuchet MS",
+        Verdana,
+        Arial,
+        sans-serif;
 
-  color: #513f4a;
+    color: #513f4a;
 
-  background-color: #f8e9ed;
+    background-color: #f8e9ed;
 
-  background-image:
-    radial-gradient(#ffffff 1px, transparent 1px),
-    radial-gradient(#e9cbd5 1px, transparent 1px);
+    background-image:
+        radial-gradient(#ffffff 1px, transparent 1px),
+        radial-gradient(#e9cbd5 1px, transparent 1px);
 
-  background-size: 18px 18px;
-  background-position: 0 0, 9px 9px;
+    background-size: 18px 18px;
+    background-position: 0 0, 9px 9px;
 
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 
-  padding: 35px 18px 60px;
+    padding: 35px 18px 60px;
 
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 
 /* =========================================================
-   MAIN WEBSITE CONTAINER
+   MAIN CONTAINER
 ========================================================= */
 
 .wrap {
-  width: min(760px, 100%);
-  text-align: center;
+    width: min(760px, 100%);
+    text-align: center;
 }
 
 
 /* =========================================================
-   TOP HEADER
+   Y2K TOP BAR
 ========================================================= */
 
 .top-window {
-  display: inline-block;
 
-  padding: 5px 14px;
+    display: inline-block;
 
-  margin-bottom: 10px;
+    padding: 5px 14px;
 
-  font-size: 12px;
-  letter-spacing: 1px;
+    margin-bottom: 10px;
 
-  color: #743e61;
+    font-size: 12px;
 
-  background: #fbd5e6;
+    letter-spacing: 1px;
 
-  border-top: 2px solid white;
-  border-left: 2px solid white;
+    color: #743e61;
 
-  border-right: 2px solid #b47792;
-  border-bottom: 2px solid #b47792;
+    background: #fbd5e6;
 
-  box-shadow:
-    2px 2px 0 #d19ab3;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #b47792;
+    border-bottom: 2px solid #b47792;
+
+    box-shadow:
+        2px 2px 0 #d19ab3;
 }
 
+
 .hint {
-  font-size: 14px;
 
-  color: #806d68;
+    font-size: 14px;
 
-  margin-bottom: 18px;
+    color: #806d68;
 
-  text-shadow:
-    1px 1px white;
+    margin-bottom: 18px;
+
+    text-shadow:
+        1px 1px white;
 }
 
 
 /* =========================================================
-   Y2K DECORATIVE STARS
+   DECORATIVE STARS
 ========================================================= */
 
 .star {
-  position: fixed;
 
-  color: #d79ab7;
+    position: fixed;
 
-  font-size: 20px;
+    color: #d79ab7;
 
-  pointer-events: none;
+    font-size: 20px;
 
-  opacity: .65;
+    pointer-events: none;
 
-  animation:
-    twinkle 2.5s infinite ease-in-out;
+    opacity: .65;
 
-  z-index: 0;
+    animation:
+        twinkle 2.5s infinite ease-in-out;
+
+    z-index: 0;
 }
+
 
 .star.one {
-  top: 12%;
-  left: 20%;
+    top: 12%;
+    left: 20%;
 }
+
 
 .star.two {
-  top: 9%;
-  right: 42%;
-  animation-delay: .7s;
+    top: 9%;
+    right: 42%;
+
+    animation-delay: .7s;
 }
+
 
 .star.three {
-  bottom: 15%;
-  right: 10%;
-  animation-delay: 1.2s;
+    bottom: 15%;
+    right: 10%;
+
+    animation-delay: 1.2s;
 }
 
+
 .star.four {
-  bottom: 28%;
-  left: 8%;
-  animation-delay: 1.8s;
+    bottom: 28%;
+    left: 8%;
+
+    animation-delay: 1.8s;
 }
+
 
 @keyframes twinkle {
 
-  0%, 100% {
-    opacity: .25;
-    transform: scale(.8);
-  }
+    0%, 100% {
+        opacity: .25;
+        transform: scale(.8);
+    }
 
-  50% {
-    opacity: .9;
-    transform: scale(1.25);
-  }
+    50% {
+        opacity: .9;
+        transform: scale(1.25);
+    }
 
 }
 
 
 /* =========================================================
-   ENVELOPE AREA
+   ENVELOPE WRAPPER
 ========================================================= */
 
 .envelope-wrapper {
-  position: relative;
 
-  width: min(560px, 94vw);
+    position: relative;
 
-  margin: 0 auto;
+    width: min(560px, 94vw);
 
-  z-index: 5;
+    margin: 0 auto;
+
+    z-index: 5;
 }
 
 
-/* CLICK LABEL */
+/* =========================================================
+   CLICK LABEL
+========================================================= */
 
 .click-label {
 
-  display: inline-block;
+    display: inline-block;
 
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 
-  padding: 4px 10px;
+    padding: 4px 10px;
 
-  font-size: 11px;
-  font-weight: bold;
+    font-size: 11px;
 
-  color: white;
+    font-weight: bold;
 
-  background: #c47fa1;
+    color: white;
 
-  border: 2px solid #8d5574;
+    background: #c47fa1;
 
-  box-shadow:
-    inset 1px 1px 0 #f9dbea,
-    2px 2px 0 #9d6c84;
+    border: 2px solid #8d5574;
 
-  text-shadow:
-    1px 1px #8d5574;
+    box-shadow:
 
-  animation: bob 1.8s infinite ease-in-out;
+        inset 1px 1px 0 #f9dbea,
+
+        2px 2px 0 #9d6c84;
+
+    text-shadow:
+        1px 1px #8d5574;
+
+    animation:
+        bob 1.8s infinite ease-in-out;
 }
+
 
 @keyframes bob {
 
-  0%, 100% {
-    transform: translateY(0);
-  }
+    0%, 100% {
+        transform: translateY(0);
+    }
 
-  50% {
-    transform: translateY(-3px);
-  }
+    50% {
+        transform: translateY(-3px);
+    }
 
 }
 
@@ -223,169 +245,197 @@ body {
 
 .envelope {
 
-  position: relative;
+    position: relative;
 
-  width: min(520px, 92vw);
-  height: 320px;
+    width: min(520px, 92vw);
 
-  margin: 0 auto;
+    height: 320px;
 
-  cursor: pointer;
+    margin: 0 auto;
 
-  perspective: 1200px;
+    cursor: pointer;
 
-  filter:
-    drop-shadow(7px 9px 0 rgba(144,92,115,.18));
+    perspective: 1200px;
+
+    filter:
+        drop-shadow(
+            7px 9px 0
+            rgba(144,92,115,.18)
+        );
+
+    transition:
+        transform .2s ease;
 }
 
 
-/* BACK OF ENVELOPE */
+.envelope:hover {
 
-.env-back {
+    transform:
+        translateY(-2px);
 
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      #eab8aa,
-      #d89d91
-    );
-
-  border-radius: 7px;
-
-  border:
-    3px solid #bd827a;
-
-  box-shadow:
-
-    inset 2px 2px 0 #f7d9d3,
-    inset -3px -3px 0 #ae7169;
-}
-
-
-/* ENVELOPE SIDE FOLDS */
-
-.env-back::before,
-.env-back::after {
-
-  content: "";
-
-  position: absolute;
-
-  bottom: 0;
-
-  width: 0;
-  height: 0;
-
-  border-style: solid;
-
-  z-index: 1;
-}
-
-.env-back::before {
-
-  left: 0;
-
-  border-width:
-    0 0 315px 255px;
-
-  border-color:
-    transparent
-    transparent
-    #c88e82
-    transparent;
-}
-
-.env-back::after {
-
-  right: 0;
-
-  border-width:
-    315px 0 0 255px;
-
-  border-color:
-    transparent
-    transparent
-    transparent
-    #c88e82;
 }
 
 
 /* =========================================================
-   LETTER PAPER INSIDE ENVELOPE
+   ENVELOPE BACK
+========================================================= */
+
+.env-back {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eab8aa,
+            #d89d91
+        );
+
+    border-radius: 7px;
+
+    border:
+        3px solid #bd827a;
+
+    box-shadow:
+
+        inset 2px 2px 0 #f7d9d3,
+
+        inset -3px -3px 0 #ae7169;
+
+    overflow: hidden;
+}
+
+
+/* ENVELOPE FOLDS */
+
+.env-back::before,
+.env-back::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+
+    z-index: 1;
+}
+
+
+.env-back::before {
+
+    left: 0;
+
+    border-width:
+        0 0 315px 255px;
+
+    border-color:
+        transparent
+        transparent
+        #c88e82
+        transparent;
+}
+
+
+.env-back::after {
+
+    right: 0;
+
+    border-width:
+        315px 0 0 255px;
+
+    border-color:
+        transparent
+        transparent
+        transparent
+        #c88e82;
+}
+
+
+/* =========================================================
+   PAPER INSIDE ENVELOPE
 ========================================================= */
 
 .paper {
 
-  position: absolute;
+    position: absolute;
 
-  left: 7%;
-  right: 7%;
+    left: 7%;
+    right: 7%;
 
-  top: 28px;
+    top: 28px;
 
-  height: 280px;
+    height: 280px;
 
-  background:
-    linear-gradient(
-      #fffdfa,
-      #fff7f2
-    );
+    background:
+        linear-gradient(
+            #fffdfa,
+            #fff7f2
+        );
 
-  border:
+    border:
+        2px solid #eadbd5;
 
-    2px solid #eadbd5;
+    padding:
+        30px 28px;
 
-  padding: 30px 28px;
+    box-shadow:
+        0 5px 15px
+        rgba(80,45,55,.15);
 
-  box-shadow:
+    z-index: 2;
 
-    0 5px 15px rgba(80,45,55,.15);
+    overflow: hidden;
 
-  z-index: 2;
 
-  overflow: hidden;
+    /*
+       STARTS HIDDEN INSIDE THE ENVELOPE
+    */
 
-  /*
-    IMPORTANT:
-    The letter starts BELOW the visible envelope.
-    This is what fixes the "already visible" problem.
-  */
+    transform:
+        translateY(45px)
+        scale(.97);
 
-  transform:
-    translateY(45px)
-    scale(.97);
+    opacity: 0;
 
-  opacity: 0;
+    transition:
 
-  transition:
+        transform
+        1s cubic-bezier(.2,.8,.2,1),
 
-    transform 1s cubic-bezier(.2,.8,.2,1),
-    opacity .4s ease;
+        opacity
+        .4s ease;
 }
 
 
 .paper h1 {
 
-  margin: 0 0 10px;
+    margin:
+        0 0 10px;
 
-  font-family:
-    Georgia,
-    serif;
+    font-family:
+        Georgia,
+        serif;
 
-  font-size: 27px;
+    font-size: 27px;
 
-  color: #684c59;
+    color: #684c59;
 }
+
 
 .paper p {
 
-  margin: 8px 0;
+    margin:
+        8px 0;
 
-  line-height: 1.6;
+    line-height:
+        1.6;
 }
 
 
@@ -395,33 +445,36 @@ body {
 
 .flap {
 
-  position: absolute;
+    position: absolute;
 
-  left: 0;
-  top: 0;
+    left: 0;
+    top: 0;
 
-  width: 0;
-  height: 0;
+    width: 0;
+    height: 0;
 
-  border-left:
-    260px solid transparent;
+    border-left:
+        260px solid transparent;
 
-  border-right:
-    260px solid transparent;
+    border-right:
+        260px solid transparent;
 
-  border-top:
-    175px solid #e7b6aa;
+    border-top:
+        175px solid #e7b6aa;
 
-  transform-origin:
-    top center;
+    transform-origin:
+        top center;
 
-  transition:
-    transform .85s cubic-bezier(.2,.8,.2,1);
+    transition:
+        transform
+        .85s cubic-bezier(.2,.8,.2,1);
 
-  z-index: 5;
+    z-index: 5;
 
-  filter:
-    drop-shadow(0 2px 0 #bd837a);
+    filter:
+        drop-shadow(
+            0 2px 0 #bd837a
+        );
 }
 
 
@@ -431,136 +484,201 @@ body {
 
 .envelope.open .flap {
 
-  transform:
-    rotateX(180deg);
+    transform:
+        rotateX(180deg);
 
-  z-index: 1;
+    z-index: 1;
 }
 
 
 /*
-   FIRST:
-   flap opens
-
-   SECOND:
-   paper rises from inside
+   PAPER POPS OUT
 */
 
 .envelope.open .paper {
 
-  opacity: 1;
+    opacity: 1;
 
-  transform:
-    translateY(-215px)
-    scale(1);
+    transform:
+        translateY(-215px)
+        scale(1);
 
-  z-index: 6;
+    z-index: 6;
 }
 
 
 /* =========================================================
-   LETTER CONTENT
+   LETTER WINDOW
 ========================================================= */
 
 .letter {
 
-  display: none;
+    display: none;
 
-  position: relative;
+    position: relative;
 
-  margin: 45px auto 0;
+    width: 100%;
 
-  padding: 35px 32px;
+    max-width: 720px;
 
-  max-width: 720px;
+    /*
+       THIS MAKES THE LETTER SCROLLABLE
+    */
 
-  text-align: left;
+    height: 520px;
 
-  background:
-    linear-gradient(
-      #fffdfa,
-      #fff8f3
-    );
+    max-height:
+        65vh;
 
-  border-radius: 4px;
+    overflow-y: auto;
 
-  border:
+    overflow-x: hidden;
 
-    3px solid #c993a8;
+    margin:
+        45px auto 0;
 
-  box-shadow:
+    padding:
+        35px 32px;
 
-    5px 5px 0 #d6aabd,
-    10px 10px 0 rgba(158,105,130,.12);
+    text-align: left;
 
-  line-height: 1.8;
+    background:
+        linear-gradient(
+            #fffdfa,
+            #fff8f3
+        );
 
-  animation:
-    letterAppear .8s ease;
+    border:
+        3px solid #c993a8;
 
+    box-shadow:
+
+        5px 5px 0 #d6aabd,
+
+        10px 10px 0
+        rgba(158,105,130,.12);
+
+    /*
+       IMPORTANT:
+       1.5 LINE SPACING
+    */
+
+    line-height:
+        1.5;
+
+    animation:
+        letterAppear .8s ease;
 }
 
 
-/* TOP BAR */
+/* =========================================================
+   CUSTOM Y2K SCROLLBAR
+========================================================= */
+
+.letter::-webkit-scrollbar {
+
+    width: 14px;
+}
+
+
+.letter::-webkit-scrollbar-track {
+
+    background:
+        #f8dce8;
+
+    border-left:
+        2px solid #c993a8;
+}
+
+
+.letter::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            #e6a9c4,
+            #c47fa1
+        );
+
+    border:
+        2px solid white;
+
+    box-shadow:
+        inset 1px 1px 0 #f6d9e6;
+}
+
+
+.letter::-webkit-scrollbar-thumb:hover {
+
+    background:
+        #b96e91;
+}
+
+
+/* =========================================================
+   LETTER WINDOW TOP BAR
+========================================================= */
 
 .letter::before {
 
-  content:
-    "♡ mina_letter.exe ♡";
+    content:
+        "♡ mina_letter.exe ♡";
 
-  display: block;
+    display: block;
 
-  margin:
-    -35px -32px 25px;
+    margin:
+        -35px -32px 25px;
 
-  padding: 6px 10px;
+    padding:
+        6px 10px;
 
-  background:
-    linear-gradient(
-      to right,
-      #d48eb0,
-      #efb9d0
-    );
+    background:
+        linear-gradient(
+            to right,
+            #d48eb0,
+            #efb9d0
+        );
 
-  color: white;
+    color: white;
 
-  font-family:
-    "Courier New",
-    monospace;
+    font-family:
+        "Courier New",
+        monospace;
 
-  font-size: 11px;
+    font-size: 11px;
 
-  font-weight: bold;
+    font-weight: bold;
 
-  border-bottom:
-    2px solid #b47794;
+    border-bottom:
+        2px solid #b47794;
 
-  text-shadow:
-    1px 1px #9d627d;
+    text-shadow:
+        1px 1px #9d627d;
 }
 
 
+/* =========================================================
+   LETTER ANIMATION
+========================================================= */
+
 @keyframes letterAppear {
 
-  from {
+    from {
 
-    opacity: 0;
+        opacity: 0;
 
-    transform:
-      translateY(30px)
-      scale(.96);
+        transform:
+            translateY(30px)
+            scale(.96);
+    }
 
-  }
+    to {
 
-  to {
+        opacity: 1;
 
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-
-  }
+        transform:
+            translateY(0)
+            scale(1);
+    }
 
 }
 
@@ -571,51 +689,88 @@ body {
 
 .letter h2 {
 
-  text-align: center;
+    text-align:
+        center;
 
-  margin-top: 0;
+    margin-top:
+        0;
 
-  margin-bottom: 5px;
+    margin-bottom:
+        5px;
 
-  color: #a35f83;
+    color:
+        #a35f83;
 
-  font-family:
-    Georgia,
-    serif;
+    font-family:
+        Georgia,
+        serif;
 
-  font-weight: normal;
+    font-weight:
+        normal;
 
-  font-size: 26px;
+    font-size:
+        26px;
 
-  text-shadow:
-    1px 1px white;
+    text-shadow:
+        1px 1px white;
 }
 
 
 .letter .small {
 
-  text-align: center;
+    text-align:
+        center;
 
-  color: #987986;
+    color:
+        #987986;
 
-  font-family:
-    "Courier New",
-    monospace;
+    font-family:
+        "Courier New",
+        monospace;
 
-  font-size: 12px;
+    font-size:
+        12px;
 
-  margin-bottom: 25px;
+    margin-bottom:
+        25px;
 }
 
 
 /* =========================================================
-   LETTER TEXT
+   PARAGRAPH FORMAT
 ========================================================= */
+
+/*
+   THIS IS THE IMPORTANT PART:
+
+   line-height: 1.5 = 1.5 spacing
+
+   text-align: justify = both sides aligned
+*/
 
 .letter p {
 
-  margin:
-    18px 0;
+    margin:
+        18px 0;
+
+    line-height:
+        1.5;
+
+    text-align:
+        justify;
+
+}
+
+
+/*
+   Greeting stays normal instead of
+   creating a weird stretched line.
+*/
+
+.letter p:first-of-type {
+
+    text-align:
+        left;
 }
 
 
@@ -625,122 +780,127 @@ body {
 
 .strawberry {
 
-  text-align: center;
+    text-align:
+        center;
 
-  margin:
-    28px auto;
+    margin:
+        28px auto;
 
-  padding:
-    14px;
+    padding:
+        14px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #fff0f6,
-      #ffe2ed
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f6,
+            #ffe2ed
+        );
 
-  color:
-    #99566f;
+    color:
+        #99566f;
 
-  font-weight: bold;
+    font-weight:
+        bold;
 
-  border:
+    border:
+        2px dashed #cf8ca8;
 
-    2px dashed #cf8ca8;
+    box-shadow:
 
-  box-shadow:
+        inset 0 0 0 2px white,
 
-    inset 0 0 0 2px white,
-    3px 3px 0 #e2b5c8;
+        3px 3px 0 #e2b5c8;
 
-  font-size: 14px;
+    font-size:
+        14px;
 }
 
 
 /* =========================================================
-   Y2K BUTTON
+   SECRET BUTTON
 ========================================================= */
 
 .reveal {
 
-  text-align: center;
+    text-align:
+        center;
 
-  margin:
-    25px 0;
+    margin:
+        25px 0;
 }
 
 
 button {
 
-  cursor: pointer;
+    cursor:
+        pointer;
 
-  padding:
-    10px 20px;
+    padding:
+        10px 20px;
 
-  font-family:
-    "Trebuchet MS",
-    Arial,
-    sans-serif;
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
 
-  font-size: 13px;
+    font-size:
+        13px;
 
-  font-weight: bold;
+    font-weight:
+        bold;
 
-  color: #713e58;
+    color:
+        #713e58;
 
-  background:
-    linear-gradient(
-      #ffeef6,
-      #e8aeca
-    );
+    background:
+        linear-gradient(
+            #ffeef6,
+            #e8aeca
+        );
 
-  border:
+    border:
+        2px solid #a76c88;
 
-    2px solid #a76c88;
+    border-top-color:
+        white;
 
-  border-top-color:
-    #fff;
+    border-left-color:
+        white;
 
-  border-left-color:
-    #fff;
+    box-shadow:
+        3px 3px 0 #9c6981;
 
-  box-shadow:
-
-    3px 3px 0 #9c6981;
-
-  transition:
-    transform .15s ease;
+    transition:
+        transform .15s ease;
 }
 
 
 button:hover {
 
-  transform:
-    translate(-1px,-1px);
-
+    transform:
+        translate(-1px,-1px);
 }
 
 
 button:active {
 
-  border-top-color:
-    #a76c88;
+    border-top-color:
+        #a76c88;
 
-  border-left-color:
-    #a76c88;
+    border-left-color:
+        #a76c88;
 
-  border-right-color:
-    white;
+    border-right-color:
+        white;
 
-  border-bottom-color:
-    white;
+    border-bottom-color:
+        white;
 
-  box-shadow:
-    1px 1px 0 #9c6981;
+    box-shadow:
+        1px 1px 0 #9c6981;
 
-  transform:
-    translate(2px,2px);
+    transform:
+        translate(2px,2px);
 }
 
 
@@ -750,35 +910,43 @@ button:active {
 
 .secret {
 
-  display: none;
+    display:
+        none;
 
-  margin-top: 15px;
+    margin-top:
+        15px;
 
-  padding: 16px;
+    padding:
+        16px;
 
-  background:
-    #fff0f7;
+    background:
+        #fff0f7;
 
-  border:
-    2px dotted #bd7797;
+    border:
+        2px dotted #bd7797;
 
-  color:
-    #81536a;
+    color:
+        #81536a;
 
-  font-family:
-    "Courier New",
-    monospace;
+    font-family:
+        "Courier New",
+        monospace;
 
-  font-size: 13px;
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
 }
 
 
 .secret.show {
 
-  display: block;
+    display:
+        block;
 
-  animation:
-    fade .5s ease;
+    animation:
+        fade .5s ease;
 }
 
 
@@ -788,53 +956,60 @@ button:active {
 
 .signature {
 
-  text-align: right;
+    text-align:
+        right !important;
 
-  margin-top: 30px;
-
-  color: #704d5d;
+    margin-top:
+        30px;
 }
 
 
 /* =========================================================
-   OLD INTERNET FOOTER
+   FOOTER
 ========================================================= */
 
 .footer {
 
-  margin-top: 35px;
+    margin-top:
+        35px;
 
-  font-family:
-    "Courier New",
-    monospace;
+    font-family:
+        "Courier New",
+        monospace;
 
-  font-size: 10px;
+    font-size:
+        10px;
 
-  color: #967482;
+    color:
+        #967482;
 
-  line-height: 1.7;
+    line-height:
+        1.7;
 }
 
 
 .online {
 
-  display: inline-block;
+    display:
+        inline-block;
 
-  padding:
-    3px 8px;
+    padding:
+        3px 8px;
 
-  margin-bottom: 5px;
+    margin-bottom:
+        5px;
 
-  background:
-    #e7f6df;
+    background:
+        #e7f6df;
 
-  border:
-    1px solid #8cac79;
+    border:
+        1px solid #8cac79;
 
-  color:
-    #55754b;
+    color:
+        #55754b;
 
-  font-weight: bold;
+    font-weight:
+        bold;
 }
 
 
@@ -844,52 +1019,57 @@ button:active {
 
 .heart {
 
-  position: fixed;
+    position:
+        fixed;
 
-  pointer-events: none;
+    pointer-events:
+        none;
 
-  color: #d69ab4;
+    color:
+        #d69ab4;
 
-  animation:
-    floatHeart 6s linear forwards;
+    animation:
+        floatHeart 6s linear forwards;
 
-  opacity: 0;
+    opacity:
+        0;
 
-  z-index: 1;
+    z-index:
+        1;
 
-  text-shadow:
-    1px 1px white;
+    text-shadow:
+        1px 1px white;
 }
 
 
 @keyframes floatHeart {
 
-  0% {
+    0% {
 
-    transform:
-      translateY(30px)
-      scale(.7);
+        transform:
+            translateY(30px)
+            scale(.7);
 
-    opacity: 0;
+        opacity:
+            0;
+    }
 
-  }
+    15% {
 
-  15% {
+        opacity:
+            .7;
+    }
 
-    opacity: .7;
+    100% {
 
-  }
+        transform:
+            translateY(-110vh)
+            translateX(35px)
+            scale(1.3);
 
-  100% {
-
-    transform:
-      translateY(-110vh)
-      translateX(35px)
-      scale(1.3);
-
-    opacity: 0;
-
-  }
+        opacity:
+            0;
+    }
 
 }
 
@@ -900,23 +1080,23 @@ button:active {
 
 @keyframes fade {
 
-  from {
+    from {
 
-    opacity: 0;
+        opacity:
+            0;
 
-    transform:
-      translateY(8px);
+        transform:
+            translateY(8px);
+    }
 
-  }
+    to {
 
-  to {
+        opacity:
+            1;
 
-    opacity: 1;
-
-    transform:
-      translateY(0);
-
-  }
+        transform:
+            translateY(0);
+    }
 
 }
 
@@ -927,127 +1107,141 @@ button:active {
 
 @media (max-width: 560px) {
 
-  body {
+    body {
 
-    padding:
-      25px 12px 45px;
-
-  }
-
-
-  .envelope {
-
-    width: 92vw;
-
-    height: 260px;
-
-  }
+        padding:
+            25px 12px 45px;
+    }
 
 
-  .flap {
+    .envelope {
 
-    border-left-width:
-      46vw;
+        width:
+            92vw;
 
-    border-right-width:
-      46vw;
-
-    border-top-width:
-      140px;
-
-  }
+        height:
+            260px;
+    }
 
 
-  .env-back::before {
+    .flap {
 
-    border-width:
-      0 0 255px 46vw;
+        border-left-width:
+            46vw;
 
-  }
+        border-right-width:
+            46vw;
 
-
-  .env-back::after {
-
-    border-width:
-      255px 0 0 46vw;
-
-  }
+        border-top-width:
+            140px;
+    }
 
 
-  .paper {
+    .env-back::before {
 
-    left: 6%;
-    right: 6%;
-
-    height: 225px;
-
-    padding:
-      22px;
-
-  }
+        border-width:
+            0 0 255px 46vw;
+    }
 
 
-  .paper h1 {
+    .env-back::after {
 
-    font-size:
-      22px;
-
-  }
-
-
-  .paper p {
-
-    font-size:
-      13px;
-
-  }
+        border-width:
+            255px 0 0 46vw;
+    }
 
 
-  .envelope.open .paper {
+    .paper {
 
-    transform:
-      translateY(-165px)
-      scale(1);
+        left:
+            6%;
 
-  }
+        right:
+            6%;
 
+        height:
+            225px;
 
-  .letter {
-
-    margin-top:
-      35px;
-
-    padding:
-      28px 20px;
-
-    font-size:
-      14px;
-
-  }
+        padding:
+            22px;
+    }
 
 
-  .letter::before {
+    .paper h1 {
 
-    margin:
-      -28px -20px 22px;
-
-  }
-
-
-  .letter h2 {
-
-    font-size:
-      22px;
-
-  }
+        font-size:
+            22px;
+    }
 
 
-  .star {
+    .paper p {
 
-    font-size:
-      15px;
+        font-size:
+            13px;
+    }
 
-  }
+
+    .envelope.open .paper {
+
+        transform:
+            translateY(-165px)
+            scale(1);
+    }
+
+
+    /*
+       Smaller scrollable letter
+       on phones
+    */
+
+    .letter {
+
+        height:
+            450px;
+
+        max-height:
+            60vh;
+
+        margin-top:
+            35px;
+
+        padding:
+            28px 20px;
+
+        font-size:
+            14px;
+    }
+
+
+    .letter::before {
+
+        margin:
+            -28px -20px 22px;
+    }
+
+
+    .letter h2 {
+
+        font-size:
+            22px;
+    }
+
+
+    .letter p {
+
+        line-height:
+            1.5;
+
+        text-align:
+            justify;
+    }
+
+
+    .star {
+
+        font-size:
+            15px;
+    }
 
 }
 
@@ -1059,302 +1253,433 @@ button:active {
 
 
 <!-- =====================================================
-     BACKGROUND DECORATIONS
+     DECORATIONS
 ===================================================== -->
 
 <div class="star one">♡</div>
+
 <div class="star two">✧</div>
+
 <div class="star three">♡</div>
+
 <div class="star four">✦</div>
+
 
 
 <div class="wrap">
 
 
-  <!-- OLD Y2K WINDOW TITLE -->
+<!-- =====================================================
+     TOP Y2K BAR
+===================================================== -->
 
-  <div class="top-window">
+<div class="top-window">
+
     ✦ WELCOME TO MY LITTLE CORNER OF THE INTERNET ✦
-  </div>
+
+</div>
 
 
-  <div class="hint">
+<div class="hint">
+
     I made this little thing for you ♡
-  </div>
+
+</div>
 
 
-  <!-- =================================================
-       ENVELOPE
-  ================================================== -->
 
-  <div class="envelope-wrapper">
+<!-- =====================================================
+     ENVELOPE
+===================================================== -->
 
-    <div class="click-label">
-      ✉ CLICK THE ENVELOPE ✉
+<div class="envelope-wrapper">
+
+
+    <div class="click-label" id="clickLabel">
+
+        ✉ CLICK THE ENVELOPE ✉
+
     </div>
+
 
 
     <div
-      class="envelope"
-      onclick="openLetter(this)"
+        class="envelope"
+        id="envelope"
+        onclick="toggleLetter()"
     >
 
-      <!-- BACK -->
 
-      <div class="env-back"></div>
+        <!-- ENVELOPE BACK -->
 
-
-      <!-- PAPER -->
-
-      <div class="paper">
-
-        <h1>
-          For Mina, ♡
-        </h1>
-
-        <p>
-          I figured I'd make your day a little better.
-        </p>
-
-        <p
-          style="
-            font-size:12px;
-            color:#987986;
-          "
-        >
-          ( Goodmorning btw )
-        </p>
-
-      </div>
+        <div class="env-back"></div>
 
 
-      <!-- FLAP -->
 
-      <div class="flap"></div>
+        <!-- PAPER -->
+
+        <div class="paper">
+
+            <h1>
+                For Mina, ♡
+            </h1>
+
+
+            <p>
+                I figured I'd make your day a little better.
+            </p>
+
+
+            <p
+                style="
+                    font-size:12px;
+                    color:#987986;
+                "
+            >
+
+                ( Goodmorning btw )
+
+            </p>
+
+        </div>
+
+
+
+        <!-- FLAP -->
+
+        <div class="flap"></div>
+
 
     </div>
 
-  </div>
+</div>
 
 
-  <!-- =================================================
-       LETTER
-  ================================================== -->
 
-  <div class="letter">
+<!-- =====================================================
+     LETTER
+===================================================== -->
+
+<div
+    class="letter"
+    id="letter"
+>
 
 
     <h2>
-      To the girl from Japan ♡
+
+        To the girl from Japan ♡
+
     </h2>
 
 
     <div class="small">
-      read it!!
+
+        read it!!
+
     </div>
 
 
+
     <p>
-      Hi Mina,
+
+        Hi Mina,
+
     </p>
 
 
+
     <p>
-      Honestly, I don't even know how to start this without making it sound
-      ridiculously cheesy HAHAHA. But I wanted to make this little letter
-      anyway, because why not? gusto ko rin kasi mabigyan ka one day.
+
+        Honestly, I don't even know how to start this without making it sound
+        ridiculously cheesy HAHAHA. But I wanted to make this little letter
+        anyway, because why not? gusto ko rin kasi mabigyan ka one day.
+
     </p>
 
 
+
     <p>
-      you know it's still kind of funny to think about how this even started.
-      when krish introduced us to eachother, and biglaan talaga. Ewan ko lang,
-      ang random noh? HAHAHAHAHAHA.
+
+        you know it's still kind of funny to think about how this even started.
+        when krish introduced us to eachother, and biglaan talaga. Ewan ko lang,
+        ang random noh? HAHAHAHAHAHA.
+
     </p>
 
 
+
     <p>
-      And now, somehow, we've been talking for about a month. And you're busy
-      with work and life, you've got your little brother to deal with,
-      and somehow you're still making time to talk to me. I notice that,
-      you know thank you.
+
+        And now, somehow, we've been talking for about a month. And you're busy
+        with work and life, you've got your little brother to deal with,
+        and somehow you're still making time to talk to me. I notice that,
+        you know thank you.
+
     </p>
 
 
+
     <p>
-      I don't want to make this into some huge confession because we're still
-      getting to know each other. I don't think I can say I know you completely
-      yet and that's actually one of the things I like about this sobrang
-      mysterious. there's still so much I don't know about you, and I genuinely
-      want to find out.
+
+        I don't want to make this into some huge confession because we're still
+        getting to know each other. I don't think I can say I know you completely
+        yet and that's actually one of the things I like about this sobrang
+        mysterious. there's still so much I don't know about you, and I genuinely
+        want to find out.
+
     </p>
 
 
+
     <p>
-      And gusto ko lang sabihin na I like things right now yk.
-      sobrang tagal ko na rin kasi may kausap and nakaka saya lang talaga ikaw
-      kausap. wow haha.. medyo kinikilig ako habang sinusulat to ah AHHA
-      kasalan mo to.
+
+        And gusto ko lang sabihin na I like things right now yk.
+        sobrang tagal ko na rin kasi may kausap and nakaka saya lang talaga ikaw
+        kausap. wow haha.. medyo kinikilig ako habang sinusulat to ah AHHA
+        kasalan mo to.
+
     </p>
 
 
+
     <p>
-      Anyway.. bermonths na dito sa phillipines siguro may plano ka jan noh
-      with friends? send mo'ko pics minsan! gusto ko rin makita lugar jan
-      lokohin ko sila na nasa japan ako. HAHAHA ano ba yan!
+
+        Anyway.. bermonths na dito sa phillipines siguro may plano ka jan
+        noh with friends? send mo'ko pics minsan! gusto ko rin makita lugar jan
+        lokohin ko sila na nasa japan ako. HAHAHA ano ba yan!
+
     </p>
 
 
+
     <p>
-      what..else... siguro the thing in my mind is when writing this is hmm
-      I don't exactly know when "This" will lead and I don't think we need
-      to figure that out right away. I just know that I enjoy talking to you,
-      I'm happy that I met you, and I'd like to keep learning more about you
-      as time goes.
+
+        what..else... siguro the thing in my mind is when writing this is hmm
+        I don't exactly know when "This" will lead and I don't think we need
+        to figure that out right away. I just know that I enjoy talking to you,
+        I'm happy that I met you, and I'd like to keep learning more about you
+        as time goes.
+
     </p>
 
 
-    <!-- =================================================
-         P.S.
-    ================================================== -->
+
+    <!-- P.S. -->
 
     <div class="strawberry">
 
-      🍓 P.S. — Strawberry Stick-O supremacy.
-      I don't make the rules. HAHAHA
+        🍓 P.S. — Strawberry Stick-O supremacy.
+        I don't make the rules. HAHAHA
 
     </div>
 
 
-    <!-- =================================================
-         SECRET
-    ================================================== -->
+
+    <!-- SECRET BUTTON -->
 
     <div class="reveal">
 
-      <button
-        onclick="
-          event.stopPropagation();
-          revealSecret();
-        "
-      >
-        ✦ One more thing... ✦
-      </button>
+
+        <button
+            onclick="
+                event.stopPropagation();
+                revealSecret();
+            "
+        >
+
+            ✦ One more thing... ✦
+
+        </button>
 
 
-      <div
-        class="secret"
-        id="secret"
-      >
 
-        If this letter made you smile even a little,
-        then okay na ako. Mission accomplished. 🤍
+        <div
+            class="secret"
+            id="secret"
+        >
 
-        And yes, I spent way too much time making this HAHAHA.
+            If this letter made you smile even a little,
+            then okay na ako. Mission accomplished. 🤍
 
-      </div>
+            <br><br>
+
+            And yes, I spent way too much time making this HAHAHA.
+
+        </div>
+
 
     </div>
 
 
-    <!-- =================================================
-         CLOSING
-    ================================================== -->
+
+    <!-- CLOSING -->
 
     <p>
 
-      Take care of yourself, okay? Don't forget to rest when you can.
-      And even if you're busy or somewhere far away, I hope you know there's
-      someone here who genuinely enjoys having you around.
+        Take care of yourself, okay? Don't forget to rest when you can.
+        And even if you're busy or somewhere far away, I hope you know there's
+        someone here who genuinely enjoys having you around.
 
     </p>
+
 
 
     <p class="signature">
 
-      From the Philippines,<br>
+        From the Philippines,<br>
 
-      <strong>
-        Terrence ♡
-      </strong>
+        <strong>
+            Terrence ♡
+        </strong>
 
     </p>
-
-
-  </div>
-
-
-  <!-- =================================================
-       Y2K FOOTER
-  ================================================== -->
-
-  <div class="footer">
-
-    <div class="online">
-      ● ONLINE
-    </div>
-
-    <br>
-
-    made with ♡ and way too much free time
-
-    <br>
-
-    ★ best viewed with a little smile :) ★
-
-  </div>
 
 
 </div>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<div class="footer">
+
+
+    <div class="online">
+
+        ● ONLINE
+
+    </div>
+
+
+    <br>
+
+
+    made with ♡ and way too much free time
+
+
+    <br>
+
+
+    ★ best viewed with a little smile :) ★
+
+
+</div>
+
+
+</div>
+
+
+
 <script>
 
 /* =====================================================
-   OPEN ENVELOPE
+   ENVELOPE + LETTER OPEN/CLOSE
 ===================================================== */
 
-function openLetter(envelope) {
-
-  /*
-    Prevent clicking again while animation is happening
-  */
-
-  if (envelope.classList.contains("open")) {
-    return;
-  }
+let isOpen = false;
 
 
-  envelope.classList.add("open");
+function toggleLetter() {
 
-
-  /*
-    Wait until the paper has popped out,
-    THEN reveal the actual long letter.
-  */
-
-  setTimeout(function() {
+    const envelope =
+        document.getElementById("envelope");
 
     const letter =
-      document.querySelector(".letter");
+        document.getElementById("letter");
 
-    letter.style.display = "block";
+    const label =
+        document.getElementById("clickLabel");
+
+
+    /* ================================================
+       CLOSE
+    ================================================ */
+
+    if (isOpen) {
+
+        isOpen = false;
+
+
+        /*
+           Hide the big letter first
+        */
+
+        letter.style.display =
+            "none";
+
+
+        /*
+           Close the envelope
+        */
+
+        envelope.classList.remove(
+            "open"
+        );
+
+
+        /*
+           Change instruction back
+        */
+
+        label.innerHTML =
+            "✉ CLICK THE ENVELOPE ✉";
+
+
+        return;
+    }
+
+
+    /* ================================================
+       OPEN
+    ================================================ */
+
+    isOpen = true;
+
+
+    envelope.classList.add(
+        "open"
+    );
+
+
+    label.innerHTML =
+        "♡ TAP ENVELOPE AGAIN TO CLOSE ♡";
+
 
     /*
-      Scroll smoothly so the user sees
-      the letter after it pops out.
+       Wait for the physical paper
+       to pop out before displaying
+       the actual letter.
     */
 
     setTimeout(function() {
 
-      letter.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+        if (!isOpen) {
+            return;
+        }
 
-    }, 150);
 
-  }, 1100);
+        letter.style.display =
+            "block";
+
+
+        /*
+           Scroll to the letter
+        */
+
+        setTimeout(function() {
+
+            letter.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }, 150);
+
+
+    }, 1100);
 
 }
 
@@ -1365,10 +1690,15 @@ function openLetter(envelope) {
 
 function revealSecret() {
 
-  const secret =
-    document.getElementById("secret");
+    const secret =
+        document.getElementById(
+            "secret"
+        );
 
-  secret.classList.toggle("show");
+
+    secret.classList.toggle(
+        "show"
+    );
 
 }
 
@@ -1379,51 +1709,74 @@ function revealSecret() {
 
 function createHeart() {
 
-  const heart =
-    document.createElement("div");
+    const heart =
+        document.createElement(
+            "div"
+        );
 
-  heart.className =
-    "heart";
 
-  const hearts = [
-    "♡",
-    "♥",
-    "✧",
-    "✦"
-  ];
+    heart.className =
+        "heart";
 
-  heart.innerHTML =
-    hearts[
-      Math.floor(
-        Math.random() * hearts.length
-      )
+
+    const hearts = [
+        "♡",
+        "♥",
+        "✧",
+        "✦"
     ];
 
 
-  heart.style.left =
-    Math.random() * 100 + "vw";
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random() *
+                hearts.length
+            )
+        ];
 
 
-  heart.style.bottom =
-    "-20px";
+    heart.style.left =
+        Math.random() *
+        100 +
+        "vw";
 
 
-  heart.style.fontSize =
-    (12 + Math.random() * 18) + "px";
+    heart.style.bottom =
+        "-20px";
 
 
-  heart.style.animationDuration =
-    (4 + Math.random() * 4) + "s";
+    heart.style.fontSize =
+        (
+            12 +
+            Math.random() *
+            18
+        ) +
+        "px";
 
 
-  document.body.appendChild(heart);
+    heart.style.animationDuration =
+        (
+            4 +
+            Math.random() *
+            4
+        ) +
+        "s";
 
 
-  setTimeout(function() {
+    document.body.appendChild(
+        heart
+    );
 
-    heart.remove();
 
-  }, 8000);
+    setTimeout(
+        function() {
+
+            heart.remove();
+
+        },
+        8000
+    );
 
 }
 
@@ -1433,11 +1786,12 @@ function createHeart() {
 ===================================================== */
 
 setInterval(
-  createHeart,
-  1000
+    createHeart,
+    1000
 );
 
 </script>
+
 
 </body>
 </html>
